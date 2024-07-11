@@ -19,7 +19,6 @@ def replay(method: Callable):
 
     print(f"{method.__qualname__} was called {len(inputs)} times:")
 
-
     for input_data, output_data in zip(inputs, outputs):
 
         input_str = input_data.decode('utf-8')
@@ -100,4 +99,4 @@ class Cache:
         """
         get int from Redis.
         """
-        return self.get(key, fn=int) 
+        return self.get(key, fn=int)
