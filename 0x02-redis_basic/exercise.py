@@ -83,7 +83,7 @@ class Cache:
         get data from Redis
         """
         data = self._redis.get(key)
-         if data is None:
+        if data is None:
             return None
         if fn is not None:
             return fn(data)
